@@ -59,6 +59,7 @@ let
     (
       if packages ? defaultPackage then {
         defaultPackage = packages.defaultPackage;
+        overlay = (final: prev: { ${name} = packages.defaultPackage.${system}; });
       } else { }
     )
     //
